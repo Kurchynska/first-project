@@ -4,6 +4,7 @@ public class Main {
         myCalculator.printResult(myCalculator.addition(20,4));
         myCalculator.printResult(myCalculator.subtraction(20,4));
         myCalculator.printResult(myCalculator.multiplication(20,4));
+        myCalculator.printResult(myCalculator.division(7,4));
     }
 
 }

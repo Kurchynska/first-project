@@ -10,6 +10,9 @@ public class Calculator {
     public int multiplication(int first, int second){
         return first*second;
     }
+    public float division(float first, float second){
+        return first/second;
+    }
     public int getFirst() {
         return first;
     }
@@ -22,7 +25,7 @@ public class Calculator {
     public void setSecond(int second) {
         this.second = second;
     }
-    public void printResult(int toPrint){
+    public void printResult(float toPrint){
         System.out.println("Result: "+toPrint);
     }
 }
