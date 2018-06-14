@@ -10,8 +10,8 @@ public class Calculator {
     public int multiplication(int first, int second){
         return first*second;
     }
-    public float division(float first, float second){
-        return first/second;
+    public float division(int first, int second){
+        return (float)first/(float)second;
     }
     public int getFirst() {
         return first;

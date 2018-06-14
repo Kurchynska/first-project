@@ -1,10 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         Calculator myCalculator = new Calculator();
-        myCalculator.printResult(myCalculator.addition(20,4));
-        myCalculator.printResult(myCalculator.subtraction(20,4));
-        myCalculator.printResult(myCalculator.multiplication(20,4));
-        myCalculator.printResult(myCalculator.division(7,4));
+        myCalculator.setFirst(7);
+        myCalculator.setSecond(4);
+        myCalculator.printResult(myCalculator.addition(myCalculator.getFirst(),myCalculator.getSecond()));
+        myCalculator.printResult(myCalculator.subtraction(myCalculator.getFirst(),myCalculator.getSecond()));
+        myCalculator.printResult(myCalculator.multiplication(myCalculator.getFirst(),myCalculator.getSecond()));
+        myCalculator.printResult(myCalculator.division(myCalculator.getFirst(),myCalculator.getSecond()));
     }
 
 }
