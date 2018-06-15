@@ -11,7 +11,7 @@ public class Calculator {
         return first*second;
     }
     public float division(int first, int second){
-        return (float)first/(float)second;
+        return (float)first/second;
     }
     public int getFirst() {
         return first;

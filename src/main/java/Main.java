@@ -3,10 +3,12 @@ public class Main {
         Calculator myCalculator = new Calculator();
         myCalculator.setFirst(7);
         myCalculator.setSecond(4);
-        myCalculator.printResult(myCalculator.addition(myCalculator.getFirst(),myCalculator.getSecond()));
-        myCalculator.printResult(myCalculator.subtraction(myCalculator.getFirst(),myCalculator.getSecond()));
-        myCalculator.printResult(myCalculator.multiplication(myCalculator.getFirst(),myCalculator.getSecond()));
-        myCalculator.printResult(myCalculator.division(myCalculator.getFirst(),myCalculator.getSecond()));
+        int a = myCalculator.getFirst();
+        int b = myCalculator.getSecond();
+        myCalculator.printResult(myCalculator.addition(a,b));
+        myCalculator.printResult(myCalculator.subtraction(a,b));
+        myCalculator.printResult(myCalculator.multiplication(a,b));
+        myCalculator.printResult(myCalculator.division(a,b));
     }
 
 }
