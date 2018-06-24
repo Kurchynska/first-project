@@ -5,8 +5,8 @@ import abc.Calculator;
 public class Main {
     public static void main(String[] args) {
         Calculator myCalculator = new Calculator();
-        myCalculator.setFirst(7);
-        myCalculator.setSecond(4);
+        myCalculator.setFirst(12);
+        myCalculator.setSecond(5);
         int a = myCalculator.getFirst();
         int b = myCalculator.getSecond();
         myCalculator.printResult(myCalculator.addition(a,b));
