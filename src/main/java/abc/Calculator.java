@@ -13,6 +13,9 @@ public class Calculator {
         return first*second;
     }
     public float division(int first, int second){
+        if(second==0){
+            throw new ArithmeticException("Division on 0");
+        }
         return (float)first/second;
     }
     public int getFirst() {
