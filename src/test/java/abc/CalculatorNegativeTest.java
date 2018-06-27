@@ -1,7 +1,12 @@
 package abc;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CalculatorNegativeTest {
+    private Calculator calc = new Calculator();
+    public final String ADD_MESSAGE = "Wrong addition result";
+    public final String MUL_MESSAGE = "Wrong multiplication result";
+    public final String DES_MESSAGE = "Wrong subtraction result";
 
     /**
      * Division by 0
@@ -10,56 +15,39 @@ public class CalculatorNegativeTest {
     public void negativeTestFirst(){
         int a = 258;
         int b = 0;
-
-        Calculator calc = new Calculator();
         calc.division(a,b);
     }
 
     /**
      * Add two positive numbers to receive number more than max int
      */
-    @Test(expectedExceptions = ArithmeticException.class)
+    @Test
     public void negativeTestSecond(){
         int a = 2147483000;
         int b = 21000;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-       if(result<a){
-            throw new  ArithmeticException("Wrong addition result");
-        }
+        Assert.assertEquals(result, -2147463296, ADD_MESSAGE);
     }
 
     /**
      * Subtract two numbers to receive result less than min int
      */
-    @Test(expectedExceptions = ArithmeticException.class)
+    @Test
     public void negativeTestThird(){
         int a = -2147483000;
         int b = 4000;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        if(result>a){
-            throw new ArithmeticException("Wrong subtraction result");
-        }
+        Assert.assertEquals(result,2147480296, DES_MESSAGE);
     }
 
     /**
      * Multiply two numbers to receive result more than max int
      */
-    @Test(expectedExceptions = ArithmeticException.class)
+    @Test
     public void negativeTestFourth(){
         int a = 2147483000;
         int b = 200;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        if(result<a){
-            throw new ArithmeticException("Wrong multiplication result");
-        }
+        Assert.assertEquals(result, -129600, MUL_MESSAGE);
     }
 }

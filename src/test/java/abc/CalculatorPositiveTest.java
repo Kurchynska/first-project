@@ -1,9 +1,13 @@
 package abc;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CalculatorPositiveTest {
+    public final String ADD_TEXT = "Addition does not work properly";
+    public final String SUBTRACT_TEXT = "Subtraction does not work properly";
+    public final String MULTIPLY_TEXT = "Multiplication does not work properly";
+    public final String DIVIDE_TEXT  = "Division does not work properly";
+    private Calculator calc = new Calculator();
 
     /**
      * Add two positive numbers
@@ -12,11 +16,8 @@ public class CalculatorPositiveTest {
     public void testFirstAddition(){
         int a = 4;
         int b = 7;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,11,"Addition does not work properly");
+        Assert.assertEquals(result,11,ADD_TEXT );
     }
 
     /**
@@ -26,12 +27,8 @@ public class CalculatorPositiveTest {
     public void testSecongAddition(){
         int a = -124;
         int b = -300;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,-424,"Addition does not work properly");
-
+        Assert.assertEquals(result,-424,ADD_TEXT );
     }
 
     /**
@@ -41,11 +38,8 @@ public class CalculatorPositiveTest {
     public void testThirdAddition(){
         int a = 573;
         int b = -253;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,320,"Addition does not work properly");
+        Assert.assertEquals(result,320,ADD_TEXT );
     }
 
     /**
@@ -55,11 +49,8 @@ public class CalculatorPositiveTest {
     public void testFourthAddition(){
         int a = 2222;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,2222,"Addition does not work properly");
+        Assert.assertEquals(result,2222,ADD_TEXT);
     }
 
     /**
@@ -69,11 +60,8 @@ public class CalculatorPositiveTest {
     public void testFifthAddition(){
         int a = 0;
         int b = -50278;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,-50278,"Addition does not work properly");
+        Assert.assertEquals(result,-50278,ADD_TEXT);
     }
 
     /**
@@ -83,11 +71,8 @@ public class CalculatorPositiveTest {
     public void testSixthAddition(){
         int a = 0;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,0,"Addition does not work properly");
+        Assert.assertEquals(result,0,ADD_TEXT);
     }
 
     /**
@@ -97,11 +82,8 @@ public class CalculatorPositiveTest {
     public void testSevenAddition(){
         int a = 2147483647;
         int b = -2147483647;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,0, "Addition does not work properly");
+        Assert.assertEquals(result,0, ADD_TEXT);
     }
 
     /**
@@ -111,11 +93,8 @@ public class CalculatorPositiveTest {
     public void testEightAddition(){
         int a = 2147480000;
         int b = 3647;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,2147483647,"Addition does not work properly" );
+        Assert.assertEquals(result,2147483647,ADD_TEXT);
     }
 
     /**
@@ -125,11 +104,8 @@ public class CalculatorPositiveTest {
     public void testTenthAddition(){
         int a = -2147483000;
         int b = -648;
-
-        Calculator calc = new Calculator();
         int result = calc.addition(a,b);
-
-        Assert.assertEquals(result,-2147483648,"Addition does not work properly");
+        Assert.assertEquals(result,-2147483648,ADD_TEXT);
     }
 
     /**
@@ -139,11 +115,8 @@ public class CalculatorPositiveTest {
     public void testFirstSubtraction(){
         int a = 12;
         int b = 5;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,7,"Subtraction does not work properly");
+        Assert.assertEquals(result,7,SUBTRACT_TEXT);
     }
 
     /**
@@ -153,11 +126,8 @@ public class CalculatorPositiveTest {
     public void testSecondSubtraction(){
         int a = 23;
         int b = 73;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,-50,"Subtraction does not work properly");
+        Assert.assertEquals(result,-50,SUBTRACT_TEXT);
     }
 
     /**
@@ -167,11 +137,8 @@ public class CalculatorPositiveTest {
     public void testThirdSubtraction(){
         int a = 12345;
         int b = 12345;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,0,"Subtraction does not work properly");
+        Assert.assertEquals(result,0,SUBTRACT_TEXT);
     }
 
     /**
@@ -181,11 +148,8 @@ public class CalculatorPositiveTest {
     public void testFourthSubtraction(){
         int a = -2345;
         int b = -345;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,-2000,"Subtraction does not work properly");
+        Assert.assertEquals(result,-2000,SUBTRACT_TEXT);
     }
 
     /**
@@ -195,11 +159,8 @@ public class CalculatorPositiveTest {
     public void testFifthSubtract(){
         int a = 7890;
         int b = -110;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,8000,"Subtraction does not work properly");
+        Assert.assertEquals(result,8000,SUBTRACT_TEXT);
     }
 
     /**
@@ -209,11 +170,8 @@ public class CalculatorPositiveTest {
     public void testSixthSubtract(){
         int a = 100100;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,100100,"Subtraction does not work properly");
+        Assert.assertEquals(result,100100,SUBTRACT_TEXT);
     }
 
     /**
@@ -223,11 +181,8 @@ public class CalculatorPositiveTest {
     public void testSeventhSubtract(){
         int a = -555;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,-555,"Subtraction does not work properly");
+        Assert.assertEquals(result,-555,SUBTRACT_TEXT);
     }
 
     /**
@@ -237,11 +192,8 @@ public class CalculatorPositiveTest {
     public void testEighthSubtract(){
         int a = 0;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,0,"Subtraction does not work properly");
+        Assert.assertEquals(result,0,SUBTRACT_TEXT);
     }
 
     /**
@@ -251,11 +203,8 @@ public class CalculatorPositiveTest {
     public void testNineSubtract(){
         int a = 2147483647;
         int b = 2147483647;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,0,"Subtraction does not work properly");
+        Assert.assertEquals(result,0,SUBTRACT_TEXT);
     }
 
     /**
@@ -265,11 +214,8 @@ public class CalculatorPositiveTest {
     public void testTenthSubtract(){
         int a = 2147480000;
         int b = -3647;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,2147483647,"Subtraction does not work properly");
+        Assert.assertEquals(result,2147483647,SUBTRACT_TEXT);
     }
 
     /**
@@ -279,11 +225,8 @@ public class CalculatorPositiveTest {
     public void testEleventhSubtract(){
         int a = -2147400000;
         int b = 83648;
-
-        Calculator calc = new Calculator();
         int result = calc.subtraction(a,b);
-
-        Assert.assertEquals(result,-2147483648,"Subtraction does not work properly");
+        Assert.assertEquals(result,-2147483648,SUBTRACT_TEXT);
     }
 
     /**
@@ -293,11 +236,8 @@ public class CalculatorPositiveTest {
     public void testFirstMultiply(){
         int a = 10;
         int b = 25;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,250,"Multiplication does not work properly");
+        Assert.assertEquals(result,250,MULTIPLY_TEXT);
     }
 
     /**
@@ -307,11 +247,8 @@ public class CalculatorPositiveTest {
     public void testSecondMultiply(){
         int a = -20;
         int b = -45;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,900,"Multiplication does not work properly");
+        Assert.assertEquals(result,900,MULTIPLY_TEXT);
     }
 
     /**
@@ -321,11 +258,8 @@ public class CalculatorPositiveTest {
     public void testThirdMultiply(){
         int a = 100;
         int b = -35;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,-3500,"Multiplication does not work properly");
+        Assert.assertEquals(result,-3500,MULTIPLY_TEXT);
     }
 
     /**
@@ -335,11 +269,8 @@ public class CalculatorPositiveTest {
     public void testFourthMultiply(){
         int a = 1002200;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,0,"Multiplication does not work properly");
+        Assert.assertEquals(result,0,MULTIPLY_TEXT);
     }
 
     /**
@@ -349,11 +280,8 @@ public class CalculatorPositiveTest {
     public void testFifthMultiply(){
         int a = -9902200;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,0,"Multiplication does not work properly");
+        Assert.assertEquals(result,0,MULTIPLY_TEXT);
     }
 
     /**
@@ -363,11 +291,8 @@ public class CalculatorPositiveTest {
     public void testSixthMultiply(){
         int a = 0;
         int b = 0;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,0,"Multiplication does not work properly");
+        Assert.assertEquals(result,0,MULTIPLY_TEXT);
     }
 
     /**
@@ -377,11 +302,8 @@ public class CalculatorPositiveTest {
     public void testSeventhMultiply(){
         int a = 2147483647;
         int b = 1;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,2147483647,"Multiplication does not work properly");
+        Assert.assertEquals(result,2147483647,MULTIPLY_TEXT);
     }
 
     /**
@@ -391,11 +313,8 @@ public class CalculatorPositiveTest {
     public void testEighthMultiply(){
         int a = 2147483647;
         int b = 1;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,2147483647,"Multiplication does not work properly");
+        Assert.assertEquals(result,2147483647,MULTIPLY_TEXT);
     }
 
     /**
@@ -405,11 +324,8 @@ public class CalculatorPositiveTest {
     public void testNinthMultiply(){
         int a = -2147483648;
         int b = 1;
-
-        Calculator calc = new Calculator();
         int result = calc.multiplication(a,b);
-
-        Assert.assertEquals(result,-2147483648,"Multiplication does not work properly");
+        Assert.assertEquals(result,-2147483648,MULTIPLY_TEXT);
     }
 
     /**
@@ -419,11 +335,8 @@ public class CalculatorPositiveTest {
     public void testFirstDivision(){
         int a = 12;
         int b = 5;
-
-        Calculator calc = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,2.4, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,2.4, 0.0001, DIVIDE_TEXT);
     }
 
     /**
@@ -433,11 +346,8 @@ public class CalculatorPositiveTest {
     public void testSecondDivision(){
         int a = -33;
         int b = -20;
-
-        Calculator calc  = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,1.65, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,1.65, 0.0001, DIVIDE_TEXT);
     }
 
     /**
@@ -447,11 +357,8 @@ public class CalculatorPositiveTest {
     public void testThirdDivision(){
         int a = 5;
         int b = -25;
-
-        Calculator calc  = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,-0.2, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,-0.2, 0.0001, DIVIDE_TEXT);
 
     }
 
@@ -462,11 +369,8 @@ public class CalculatorPositiveTest {
     public void testFourthDivision(){
         int a = 0;
         int b = 213456;
-
-        Calculator calc = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,0, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,0, 0.0001, DIVIDE_TEXT);
     }
 
     /**
@@ -476,11 +380,8 @@ public class CalculatorPositiveTest {
     public void testFifthDivision(){
         int a = 0;
         int b = -7381728;
-
-        Calculator calc = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,0, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,0, 0.0001, DIVIDE_TEXT);
     }
 
     /**
@@ -490,11 +391,8 @@ public class CalculatorPositiveTest {
     public void testSixthDivision(){
         int a = 2147483647;
         int b = 1000;
-
-        Calculator calc = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,2147483.75, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,2147483.75, 0.0001, DIVIDE_TEXT);
     }
 
     /**
@@ -504,11 +402,8 @@ public class CalculatorPositiveTest {
     public void testSevenDivision(){
         int a = -2147483648;
         int b = 2147483647;
-
-        Calculator calc = new Calculator();
         float result = calc.division(a,b);
-
-        Assert.assertEquals(result,-1, 0.0001, "Division does not work properly");
+        Assert.assertEquals(result,-1, 0.0001, DIVIDE_TEXT);
     }
 
 }
